@@ -1,0 +1,13 @@
+version: '3'
+services:
+  bdms-assignment:
+    image: registry.gitlab.com/iampaisan-gitlab/bdms-assignment:0.0.1
+    restart: always
+    ports:
+      - "28083:8083"
+    environment:
+      PORT: 8083
+      # JSON File
+      DATA_FILE_PATH: ""
+      # RateLimit
+      RATE_LIMIT: 30
