@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "96a13724-8db1-4de6-981a-ebb98238c949",
+		"name": "BDMS-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8491292"
+	},
+	"item": [
+		{
+			"name": "Get Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/assignment/v1/todos?offset=0&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"assignment",
+						"v1",
+						"todos"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Todos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/assignment/v1/todos?offset=0&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"assignment",
+								"v1",
+								"todos"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"msg\": \"\",\n    \"data\": [\n        {\n            \"id\": \"1722851648852\",\n            \"title\": \"test-1\",\n            \"todo\": \"todo-1\",\n            \"createdDate\": \"2024-08-05T09:54:08.852Z\",\n            \"updatedDate\": null\n        },\n        {\n            \"id\": \"1722851665305\",\n            \"title\": \"test-2.1\",\n            \"todo\": \"todo-2.1\",\n            \"createdDate\": \"2024-08-05T09:54:25.305Z\",\n            \"updatedDate\": \"2024-08-05T10:08:09.274Z\"\n        },\n        {\n            \"id\": \"1722912032607\",\n            \"title\": \"test-3\",\n            \"todo\": \"todo-3\",\n            \"createdDate\": \"2024-08-06T02:40:32.607Z\",\n            \"updatedDate\": null\n        },\n        {\n            \"id\": \"1722912037511\",\n            \"title\": \"test-4\",\n            \"todo\": \"todo-4\",\n            \"createdDate\": \"2024-08-06T02:40:37.511Z\",\n            \"updatedDate\": null\n        },\n        {\n            \"id\": \"1722912043707\",\n            \"title\": \"test-5\",\n            \"todo\": \"todo-5\",\n            \"createdDate\": \"2024-08-06T02:40:43.707Z\",\n            \"updatedDate\": null\n        }\n    ],\n    \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 5,\n        \"count\": 8,\n        \"totalPage\": 2,\n        \"totalRecord\": 8\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"\",\n    \"todo\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/assignment/v1/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"assignment",
+						"v1",
+						"todos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"\",\n    \"todo\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/assignment/v1/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"assignment",
+								"v1",
+								"todos"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": \"1723190949526\",\n    \"title\": \"title-9\",\n    \"todo\": \"todo-9\",\n    \"createdDate\": \"2024-08-09T08:09:09.526Z\",\n    \"updatedDate\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"\",\n    \"todo\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/assignment/v1/todos/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"assignment",
+						"v1",
+						"todos",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Todo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"\",\n    \"todo\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/assignment/v1/todos/1722851665305",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"assignment",
+								"v1",
+								"todos",
+								"1722851665305"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": \"1722851665305\",\n    \"title\": \"test-2.new\",\n    \"todo\": \"todo-2.new\",\n    \"createdDate\": \"2024-08-05T09:54:25.305Z\",\n    \"updatedDate\": \"2024-08-09T08:10:29.914Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/assignment/v1/todos/archive/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"assignment",
+						"v1",
+						"todos",
+						"archive",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
